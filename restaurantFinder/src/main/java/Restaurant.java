@@ -64,6 +64,7 @@ public class Restaurant {
         return name;
     }
 
+
     public int calculateTotalCost(List<String> items) throws itemNotFoundException{
         int totalExpense = menu.stream().filter(item -> items.stream().anyMatch(selectedItem -> selectedItem.equals(item.getName()))).
                 mapToInt(Item::getPrice).sum();
